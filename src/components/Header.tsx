@@ -89,7 +89,8 @@ export const ExampleHeader = () => {
                     </button>
                 </div>
                 <Popover.Group className="hidden lg:flex lg:gap-x-12">
-                    <Popover className="relative">
+                    {/* <Popover className="relative"> */}
+                    <Popover>
                         <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
                             Product
                             <ChevronDownIcon
@@ -107,8 +108,9 @@ export const ExampleHeader = () => {
                             leaveFrom="opacity-100 translate-y-0"
                             leaveTo="opacity-0 translate-y-1"
                         >
-                            <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
-                                <div className="p-4">
+                            {/* <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5"> */}
+                            <Popover.Panel className="absolute z-10 mt-3 inset-x-0 w-screen max-w-full rounded overflow-hidden bg-white shadow-lg ring-1 ring-gray-900/5">
+                                <div className="px-6 p-4">
                                     {products.map((item) => (
                                         <div
                                             key={item.name}
